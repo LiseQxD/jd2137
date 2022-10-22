@@ -3,8 +3,8 @@
   }
  body {
   padding: 25px;
-background-color: #e6e7e8;
-color: #3e3f40;
+background-color: #3e3f40;
+color: #e6e7e8;
   font-size: 25px;
 }
 
@@ -50,7 +50,7 @@ color: #3e3f40;
 }
 
 input:checked + .slider {
-  background-color: #e6e7e8;
+  background-color: #3e3f40;
 }
 
 input:focus + .slider {
