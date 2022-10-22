@@ -1,7 +1,14 @@
 .center {
     text-align: center;
   }
-  .dark {
-            background-color: #3e3f40;
-            color: #e6e7e8;
-        }
+ body {
+  padding: 25px;
+  background-color: white;
+  color: black;
+  font-size: 25px;
+}
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
