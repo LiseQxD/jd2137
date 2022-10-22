@@ -3,6 +3,7 @@
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="dark.css">
  <title>1odcinek</title>
+	<div class="light">
 <body>
 
 <div class="top">
@@ -12,31 +13,22 @@
 <div class="menu">
 <h2 class="center"><a href="breakingbad2.html">następny</a>
 <a href="https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm?hl=pl" id="open-popup"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/UBlock_Origin.svg/1200px-UBlock_Origin.svg.png" width="100px"></a>
-
- <script>
-(() => {
-	let id = document.getElementById("open-popup");
-	let popupWindow = null;
-	let windowSize = 'width=1000,height=600,left=220,top=150';
-
-	id.addEventListener("click", function(event){
-		let url = this.href;
-		if (popupWindow === null || popupWindow.closed) {
-			popupWindow = window.open(url, 'Adblock', windowSize);
-		} else {
-			popupWindow.focus();
-		}
-		event.preventDefault();
-	});
-})();
-</script>
 </div>
 
 <div class="footer">
 
 
 </div>
- 
+	</div>
+	<script>
+const btn = document.getElementById('btn');
+        btn.addEventListener('click', function () {
+            var elmWitchChange = document.getElementsByClassName('light')
+            for (var i = 0; i < elmWitchChange.length; i++) {
+                elmWitchChange[i].classList.toggle('dark')
+            }
+        })
+	</script>
 </body>
 </html>
 
