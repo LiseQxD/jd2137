@@ -3,14 +3,14 @@
   }
  body {
   padding: 25px;
-background-color: #3e3f40;
-color: #e6e7e8;
+background-color: #e6e7e8;
+color: #3e3f40;
   font-size: 25px;
 }
 
 .dark-mode {
-background-color: #e6e7e8;
-color: #3e3f40;
+background-color: #3e3f40;
+color: #e6e7e8;
 }
 .switch {
   position: relative;
@@ -32,7 +32,7 @@ color: #3e3f40;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background-color: rgb(177, 175, 175);
   -webkit-transition: .4s;
   transition: .4s;
 }
@@ -44,13 +44,13 @@ color: #3e3f40;
   width: 26px;
   left: 4px;
   bottom: 4px;
-  background-color: #3e3f40;
+  background-color: black;
   -webkit-transition: .4s;
   transition: .4s;
 }
 
 input:checked + .slider {
-  background-color: #3e3f40;
+  background-color: rgb(129, 129, 129);
 }
 
 input:focus + .slider {
@@ -71,3 +71,8 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
+.rightup {
+    position: relative;
+    top: -75px;
+    right: 50px;
+ }
