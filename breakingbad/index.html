@@ -24,9 +24,9 @@
 </div>
  <script>
 function myFunction() {
+  localStorage.setItem('isDarkMode', true);
    var element = document.body;
    element.classList.toggle("dark-mode");
-  localStorage.setItem('isDarkMode', true);
  if (localStorage.getItem('isDarkMode') === 'true') {
     document.getElementById('top').classList.add('dark-mode');
 }
