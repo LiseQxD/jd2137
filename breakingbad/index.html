@@ -24,6 +24,9 @@
 </div>
  <script>
 function myFunction() {
+ localStorage.setItem('isDarkMode', true);
+ if (localStorage.getItem('isDarkMode') === 'true') {
+    document.getElementById('top').classList.add('dark-mode');
    var element = document.body;
    element.classList.toggle("dark-mode");
 }
@@ -45,36 +48,7 @@ function myFunction() {
         });
     })();
     </script>
-<Script>
- const toggleBtn = document.getElementById("toggle-btn");
-const theme = document.getElementById("theme");
-let darkMode = localStorage.getItem("dark-mode");
 
-const enableDarkMode = () => {
-  theme.classList.add("dark-mode");
-  toggleBtn.classList.remove("toggletheme");
-  localStorage.setItem("dark-mode", "enabled");
-};
-
-const disableDarkMode = () => {
-  theme.classList.remove("dark-mode");
-  toggleBtn.classList.add("toggletheme");
-  localStorage.setItem("dark-mode", "disabled");
-};
-
-if (dark-Mode === "enabled") {
-  enableDarkMode();
-}
-
-toggleBtn.addEventListener("click", (e) => {
-  darkMode = localStorage.getItem("dark-mode"); 
-  if (dark-Mode === "disabled") {
-    enableDarkMode();
-  } else {
-    disableDarkMode();
-  }
-});
-</Script>
 </body>
 </html>
 
