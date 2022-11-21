@@ -1,17 +1,6 @@
 .center {
     text-align: center;
   }
- body {
-  padding: 25px;
-background-color: #e6e7e8;
-color: #3e3f40;
-  font-size: 25px;
-}
-
-.dark-mode {
-background-color: #3e3f40;
-color: #e6e7e8;
-}
 .switch {
   position: relative;
   display: inline-block;
@@ -76,3 +65,32 @@ input:checked + .slider:before {
     top: -75px;
     right: 50px;
  }
+body {
+  font-family: sans-serif;
+  margin: 0;
+}
+
+#toggle-btn {
+  padding: 0.5em;
+  font-weight: 800;
+}
+
+#toggle-btn:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.dark-mode-toggle {
+  background:#e6e7e8;
+  color: #3e3f40;
+}
+
+#theme {
+  width: 100vw;
+  height: 100vh;
+}
+
+.dark-mode-theme {
+  background: #e6e7e8;
+  color: #3e3f40;
+}
