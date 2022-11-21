@@ -4,9 +4,9 @@
  <title>1odcinek</title>
 
 <body>
-<div class="top">
+<div class="theme">
 <h1 class="center">breaking bad</h1> <div class="rightup" dir="rtl">
-    <label class="switch"><input type="checkbox" id="toggletheme" oninput="myFunction()">
+    <label class="switch"><input type="checkbox" id="toggle-btn" class="dark-mode-toggle">
         <span class="slider round" class="switch input"> </div>
 
     </label> 
@@ -22,15 +22,6 @@
 
 
 </div>
- <script>
-function myFunction() {
-  localStorage.setItem('isDarkMode', true);
-   var element = document.body;
-   element.classList.toggle("dark-mode");
- if (localStorage.getItem('isDarkMode') === 'true') {
-    document.getElementById('top').classList.add('dark-mode');
-}
-</script>
 <script>
     (() => {
         let id = document.getElementById("open-popup");
@@ -48,7 +39,36 @@ function myFunction() {
         });
     })();
     </script>
+<script>
+ const toggleBtn = document.getElementById("toggle-btn");
+const theme = document.getElementById("theme");
+let darkMode = localStorage.getItem("dark-mode");
 
+const enableDarkMode = () => {
+  theme.classList.add("dark-mode-theme");
+  toggleBtn.classList.remove("dark-mode-toggle");
+  localStorage.setItem("dark-mode", "enabled");
+};
+
+const disableDarkMode = () => {
+  theme.classList.remove("dark-mode-theme");
+  toggleBtn.classList.add("dark-mode-toggle");
+  localStorage.setItem("dark-mode", "disabled");
+};
+
+if (darkMode === "enabled") {
+  enableDarkMode(); // set state of darkMode on page load
+}
+
+toggleBtn.addEventListener("click", (e) => {
+  darkMode = localStorage.getItem("dark-mode"); // update darkMode when clicked
+  if (darkMode === "disabled") {
+    enableDarkMode();
+  } else {
+    disableDarkMode();
+  }
+});
+ </script>
 </body>
 </html>
 
