@@ -81,8 +81,8 @@ body {
 }
 
 .dark-mode-toggle {
-  background:#e6e7e8;
-  color: #3e3f40;
+  background:#3e3f40;
+  color: #e6e7e8;
 }
 
 #theme {
@@ -91,6 +91,6 @@ body {
 }
 
 .dark-mode-theme {
-  background: #e6e7e8;
-  color: #3e3f40;
+  background: #3e3f40;
+  color: #e6e7e8;
 }
