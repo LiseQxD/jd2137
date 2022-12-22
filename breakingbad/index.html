@@ -133,49 +133,6 @@ showVideo(currentVideoIndex);
   document.addEventListener('DOMContentLoaded', function() {
   player.src = localStorage.getItem('lastVideo') || 'https://www.youtube.com/watch?v=M7lc1UVf-VE';
 });
-player.addEventListener('ended', function() {
-  localStorage.setItem('lastVideo', player.src);
-  localStorage.setItem('lastTitle', document.querySelector('.title').textContent);
-});
-  document.addEventListener('DOMContentLoaded', function() {
-  player.src = localStorage.getItem('lastVideo') || 'https://www.youtube.com/watch?v=M7lc1UVf-VE';
-  document.querySelector('.title').textContent = localStorage.getItem('lastTitle') || 'Tytuł filmu';
-});
-  document.querySelector('.title').textContent = buttons[index].textContent;
-localStorage.setItem('lastTitle', document.querySelector('.title').textContent);
-function saveFilmTitles() {
-  // Get the input field where the user can enter film titles
-  let inputField = document.getElementById('film-title-input');
-  let filmTitle = inputField.value;
-
-  // Retrieve the filmTitles array from localStorage
-  let filmTitles = JSON.parse(localStorage.getItem('filmTitles')) || [];
-
-  // Add the film title to the filmTitles array
-  filmTitles.push(filmTitle);
-
-  // Save the updated filmTitles array to localStorage
-  localStorage.setItem('filmTitles', JSON.stringify(filmTitles));
-
-  // Clear the input field
-  inputField.value = '';
-
-  // Display the updated list of film titles
-  displayFilmTitles();
-}
-
-function displayFilmTitles() {
-  // Retrieve the filmTitles array from localStorage
-  let filmTitles = JSON.parse(localStorage.getItem('filmTitles')) || [];
-
-  // Loop through the filmTitles array and display each title
-  for (let i = 0; i < filmTitles.length; i++) {
-    let filmTitle = filmTitles[i];
-    let titleElement = document.createElement('li');
-    titleElement.innerText = filmTitle;
-    document.getElementById('film-titles').appendChild(titleElement);
-  }
-}
 </script>
 </body>
 </html>
