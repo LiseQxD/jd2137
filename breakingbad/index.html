@@ -133,7 +133,14 @@ showVideo(currentVideoIndex);
   document.addEventListener('DOMContentLoaded', function() {
   player.src = localStorage.getItem('lastVideo') || 'https://www.youtube.com/watch?v=M7lc1UVf-VE';
 });
-
+player.addEventListener('ended', function() {
+  localStorage.setItem('lastVideo', player.src);
+  localStorage.setItem('lastTitle', document.querySelector('.title').textContent);
+});
+  document.addEventListener('DOMContentLoaded', function() {
+  player.src = localStorage.getItem('lastVideo') || 'https://www.youtube.com/watch?v=M7lc1UVf-VE';
+  document.querySelector('.title').textContent = localStorage.getItem('lastTitle') || 'Tytuł filmu';
+});
 </script>
 </body>
 </html>
