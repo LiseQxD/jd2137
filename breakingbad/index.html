@@ -124,9 +124,16 @@ showVideo(currentVideoIndex);
   player.addEventListener('load', function() {
   localStorage.setItem('lastVideo', player.src);
 });
+  player.addEventListener('ended', function() {
+  localStorage.setItem('lastVideo', player.src);
+});
   window.addEventListener('load', function() {
   player.src = localStorage.getItem('lastVideo') || 'https://www.youtube.com/watch?v=M7lc1UVf-VE';
 });
+  document.addEventListener('DOMContentLoaded', function() {
+  player.src = localStorage.getItem('lastVideo') || 'https://www.youtube.com/watch?v=M7lc1UVf-VE';
+});
+
 </script>
 </body>
 </html>
