@@ -1,4 +1,3 @@
- <script>
 function showVideo(index) {
   videoPlayer.src = videos[index].url;
   title.textContent = videos[index].title;
@@ -89,8 +88,6 @@ if (savedTheme === 'dark') {
 }
 
 showVideo(currentVideoIndex);
-</script>
-<script>
   const player = document.querySelector('.video-player');
   
   player.addEventListener('pause', function() {
@@ -103,4 +100,3 @@ showVideo(currentVideoIndex);
       player.src = `https://www.youtube.com/embed/${currentVideoId}`;
     }
   });
-</script>
