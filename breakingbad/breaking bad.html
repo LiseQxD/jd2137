@@ -112,8 +112,7 @@ showVideo(currentVideoIndex);
 </script>
 <script>
   const player = document.querySelector('.video-player');
-
-  // Set a local storage item when the video is paused
+  
   player.addEventListener('pause', function() {
     const currentVideoId = player.dataset.videoId;
     localStorage.setItem('current_video', currentVideoId);
