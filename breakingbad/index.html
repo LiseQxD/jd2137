@@ -121,6 +121,12 @@ showVideo(currentVideoIndex);
       player.src = `https://www.youtube.com/embed/${currentVideoId}`;
     }
   });
+  player.addEventListener('load', function() {
+  localStorage.setItem('lastVideo', player.src);
+});
+  window.addEventListener('load', function() {
+  player.src = localStorage.getItem('lastVideo') || 'https://www.youtube.com/watch?v=M7lc1UVf-VE';
+});
 </script>
 </body>
 </html>
