@@ -1,4 +1,5 @@
-         function showVideo(index) {
+ <script>
+function showVideo(index) {
   videoPlayer.src = videos[index].url;
   title.textContent = videos[index].title;
   const prevButton = document.querySelector('.prev-button');
@@ -102,3 +103,4 @@ showVideo(currentVideoIndex);
       player.src = `https://www.youtube.com/embed/${currentVideoId}`;
     }
   });
+</script>
