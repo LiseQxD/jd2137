@@ -1,0 +1,110 @@
+      .video-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .video-player {
+        width: 800px;
+        height: 450px;
+      }
+
+      .buttons {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+      }
+
+      .button {
+        font-size: 16px;
+        padding: 10px 20px;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+      }
+
+      .button.light {
+        background-color: #ffffff;
+        color: #000000;
+      }
+
+      .button.dark {
+        background-color: #333333;
+        color: #ffffff;
+      }
+
+      .title {
+        font-size: 24px;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+
+      .dark-mode-toggle {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 16px;
+        padding: 10px 20px;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+      }
+
+      body.dark {
+        background-color: #333333;
+        color: #ffffff;
+      }
+
+      body.dark .button.light {
+        background-color: #333333;
+        color: #ffffff;
+      }
+
+      body.dark .dark-mode-toggle.light {
+        background-color: #333333;
+        color: #ffffff;
+      }
+      .prev-next-buttons {
+        font-size: 16px;
+        padding: 10px 20px;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        text-align: center;
+        }
+        .prev-button {
+        font-size: 16px;
+        padding: 10px 20px;
+        border-radius: 5px;
+        border: 2px solid #333333;
+        cursor: pointer;
+      }
+
+      .prev-button.light {
+        background-color: #ffffff;
+        color: #333333;
+      }
+
+      .prev-button.dark {
+        background-color: #333333;
+        color: #ffffff;
+      }
+
+      .next-button {
+        font-size: 16px;
+        padding: 10px 20px;
+        border-radius: 5px;
+        border: 2px solid #333333;
+        cursor: pointer;
+      }
+
+      .next-button.light {
+        background-color: #ffffff;
+        color: #333333;
+      }
+
+      .next-button.dark {
+        background-color: #333333;
+        color: #ffffff;
+      }
