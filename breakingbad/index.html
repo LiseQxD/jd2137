@@ -133,6 +133,14 @@ showVideo(currentVideoIndex);
   document.addEventListener('DOMContentLoaded', function() {
   player.src = localStorage.getItem('lastVideo') || 'https://www.youtube.com/watch?v=M7lc1UVf-VE';
 });
+const cards = document.querySelectorAll('.card');
+
+for (let i = 0; i < cards.length; i++) {
+  const title = cards[i].querySelector('.card-title').textContent;
+  const image = cards[i].querySelector('.card-img-top').src;
+  
+  localStorage.setItem(`film-${i}`, JSON.stringify({ title, image }));
+}
 </script>
 </body>
 </html>
