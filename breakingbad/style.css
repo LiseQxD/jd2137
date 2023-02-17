@@ -1,0 +1,245 @@
+/* Stylowanie strony internetowej */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: #fafafa;
+  color: #333;
+}
+
+/* Tryb ciemny */
+body.dark-mode{
+  background-color: #333;
+  color: #fafafa;
+}
+
+/* Przełącznik trybu ciemnego */
+.switch {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: inline-block;
+  width: 40px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(16px);
+  -ms-transform: translateX(16px);
+  transform: translateX(16px);
+}
+
+/* Tytuł filmu */
+h1 {
+  text-align: center;
+  margin: 15px 0;
+}
+
+/* Div z filmem */
+#movieContainer {
+  display: flex;
+  z-index: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 400px;
+  position: relative;
+}
+
+#movie {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Zmiana skali filmu, aby pokrył cały ekran */
+
+}
+
+/* Przyciski nawigacji */
+button {
+  width: 100px;
+  height: 40px;
+  font-size: 16px;
+  background-color: #2196f3;
+  color: #fff;
+  border: 2px solid white;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px auto;
+}
+button:hover {
+  background-color: #0d47a1;
+}
+
+button:disabled {
+  background-color: #ccc;
+  color: #333;
+  cursor: default;
+}
+
+/* Przyciski filmów */
+.movie-button {
+  margin: 0 5px;
+  width: 100px;
+  height: 40px;
+  font-size: 14px;
+  color: white;
+  background-color: #333;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.movie-button:hover {
+  background-color: #2196f3;
+}
+
+.movie-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+#movieContainer, #movieButtons {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  margin: 0 auto;
+}
+body.dark-mode button {
+  background-color: #fff;
+  color: #333;
+}
+
+body.dark-mode button:hover {
+  background-color: #ccc;
+} 
+body:not(.dark-mode) button {
+  background-color: #333;
+  color: #fff;
+}
+
+body:not(.dark-mode) button:hover {
+  background-color: rgb(134, 134, 134);
+}
+#movieButtons button:nth-of-type(18n+1) {
+  clear: both;
+}
+#movieButtons {
+  display: flex;
+  flex-wrap: wrap;
+  }
+  
+  #movieButtons button {
+  width: calc(20% - 10px);
+  margin: 5px;
+  }
+  .season {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .season h2 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+/* Pop-up container */
+#popup-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 9999;
+  display: none;
+}
+
+/* Pop-up box */
+#popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  border: 1px solid #333; 
+}
+
+/* Close button */
+#close-button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  display: block;
+  margin: 0;
+  padding: 5px;
+  border: none;
+  background-color: #2196f3;
+  color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.2em;
+  width: 30px;
+  height: 30px;
+  line-height: 1;
+  text-align: center;
+}
+
+#open-button {
+  display: block;
+  margin: 20px 0 0 20px;
+  padding: 10px;
+  border: none;
+  background-color: #2196f3;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+} 
+/* Styling for the popup container in dark mode */
+body.dark-mode #popup-container {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.dark-mode #popup {
+  background-color: black;
+  color: white;
+}
