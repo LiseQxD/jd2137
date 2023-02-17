@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Breaking Bad</title>
+    <!-- Ładowanie stylów CSS -->
+    <link rel="stylesheet" type="text/css" href="jd2137/breakingbad/style.css" />
+  </head>
+  <body>
+<!-- Pop-up container -->
+<div id="popup-container">
+  <div id="popup">
+    <button id="close-button">&times;</button>
+    <h2>Pobierz se tego ten no yy ten adblock no </h2> 
+    <p>Nie da sie oglądać bez tego typu adblocka więc no polecam magda gestler</p>
+    <a href="https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm?hl=pl" target="_blank">tu link do tego adblocka</a>
+  </div>
+</div>
+
+<!-- Open pop-up button -->
+<button id="open-button">Adblock</button>
+    <!-- Przełącznik trybu ciemnego -->
+    <label class="switch">
+      <input type="checkbox" id="darkModeSwitch" onchange="toggleDarkMode()">
+      <span class="slider round"></span>
+    </label>
+
+    <!-- Tytuł filmu -->
+    <h1 id="movieTitle"></h1>
+    <!-- Div z filmem -->
+    <div id="movieContainer">
+      <iframe id="movie" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen width="100%"></iframe>
+    </div>
+    <!-- Przyciski nawigacji -->
+    <div style="text-align: center">
+      <button id="prevButton" onclick="prevMovie()" style="margin: 10px auto; border: none;">Poprzedni</button>
+      <button id="nextButton" onclick="nextMovie()" style="margin: 10px auto; border: none;">Następny</button>
+    </div>
+
+    <!-- Przyciski filmów -->
+    <div id="movieButtons"></div>
+    <!-- Ładowanie skryptu JavaScript -->
+    <script src="jd2137/breakingbad/script.js"></script>
+  </body>
+</html>
