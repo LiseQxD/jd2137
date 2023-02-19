@@ -273,6 +273,7 @@ var movies = [
         return function() {
           currentMovieIndex = index;
           setMovie(currentMovieIndex);
+          saveMovie();
         };
       }(i));
       buttonsContainer.appendChild(button);
