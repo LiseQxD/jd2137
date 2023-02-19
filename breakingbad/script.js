@@ -279,21 +279,22 @@ var movies = [
     }
   }
   
-  // Funkcja obsługująca przycisk "Poprzedni"
   function prevMovie() {
     currentMovieIndex--;
     if (currentMovieIndex < 0) {
       currentMovieIndex = movies.length - 1;
     }
+    saveMovie(); // Save the current movie index in localStorage
     setMovie(currentMovieIndex);
   }
   
-  // Funkcja obsługująca przycisk "Następny"
+  
   function nextMovie() {
     currentMovieIndex++;
     if (currentMovieIndex >= movies.length) {
       currentMovieIndex = 0;
     }
+    saveMovie(); // Save the current movie index in localStorage
     setMovie(currentMovieIndex);
   }
   
@@ -319,31 +320,16 @@ var movies = [
     }
   }
   
-  // Inicjalizacja strony
   function init() {
+    currentMovieIndex = localStorage.getItem('currentMovieIndex');
+    if (currentMovieIndex === null) {
+      currentMovieIndex = 0; // Default to first movie
+    }
     setMovie(currentMovieIndex);
     createMovieButtons();
     getDarkModeState();
   }
   
-  init();
-  function saveMovie(title, src) {
-    localStorage.setItem("currentMovieTitle", title);
-    localStorage.setItem("currentMovieSrc", src);
-  }
-  
-  // Funkcja do pobierania odtwarzanego filmu z localStorage
-  function loadMovie() {
-    var title = localStorage.getItem("currentMovieTitle");
-    var src = localStorage.getItem("currentMovieSrc");
-  
-    if (title && src) {
-      document.getElementById("movieTitle").innerHTML = title;
-      document.getElementById("movie").src = src;
-    }
-  }
-// Na początku załaduj odtwarzany film z localStorage
-loadMovie();
 // Get elements
 const popupContainer = document.getElementById('popup-container');
 const popup = document.getElementById('popup');
@@ -390,3 +376,24 @@ openButton.addEventListener('click', function() {
   popupContainer.style.display = 'block';
   dimPage();
 });
+init();
+function saveMovie(title, src,) {
+  localStorage.setItem("currentMovieTitle", title);
+  localStorage.setItem("currentMovieSrc", src);
+}
+
+// Funkcja do pobierania odtwarzanego filmu z localStorage
+function loadMovie() {
+  var title = localStorage.getItem("currentMovieTitle");
+  var src = localStorage.getItem("currentMovieSrc");
+
+  if (title && src) {
+    document.getElementById("movieTitle").innerHTML = title;
+    document.getElementById("movie").src = src;
+  }
+}
+// Na początku załaduj odtwarzany film z localStorage
+loadMovie();
+function saveMovie() {
+  localStorage.setItem('currentMovieIndex', currentMovieIndex);
+}
